@@ -1,0 +1,16 @@
+version: '3.1'
+volumes:
+  data:
+services:
+  postgres:
+    container_name: facilitapay_postgresql
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: facilitapay_exercise_dev
+    restart: always
+    ports: 
+      - 5432:5432
+    volumes:
+      - data:/var/lib/postgresql/facilitapay_postgresql/data

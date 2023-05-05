@@ -23,6 +23,7 @@ defmodule FacilitaPayExerciseWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import FacilitaPayExerciseWeb.ConnCase
+      import FacilitaPayExercise.Factory
 
       alias FacilitaPayExerciseWeb.Router.Helpers, as: Routes
 

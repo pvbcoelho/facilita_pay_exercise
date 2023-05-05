@@ -5,8 +5,9 @@ defmodule FacilitaPayExerciseWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", FacilitaPayExerciseWeb do
+  scope "/", FacilitaPayExerciseWeb do
     pipe_through :api
+    post "/csv_report/:report_name", CsvReportController, :create
   end
 
   # Enables LiveDashboard only for development
