@@ -44,7 +44,7 @@ defmodule FacilitaPayExerciseWeb.CsvReportControllerTest do
       asserts_resume(conn, "2023-01-02,3")
     end
 
-    test "sould return an error when given a wrong start_date format", %{conn: conn} do
+    test "should return an error when given a wrong start_date format", %{conn: conn} do
       conn =
         post(conn, Routes.csv_report_path(conn, :create, "DailyRegistrations"), %{
           start_date: "foo"
@@ -53,7 +53,7 @@ defmodule FacilitaPayExerciseWeb.CsvReportControllerTest do
       asserts_invalid_date_format(conn)
     end
 
-    test "sould return an error when given a wrong end_date format", %{conn: conn} do
+    test "should return an error when given a wrong end_date format", %{conn: conn} do
       conn =
         post(conn, Routes.csv_report_path(conn, :create, "DailyRegistrations"), %{
           end_date: "foo"
@@ -109,7 +109,7 @@ defmodule FacilitaPayExerciseWeb.CsvReportControllerTest do
       )
     end
 
-    test "sould return an error when given a wrong start_date format", %{conn: conn} do
+    test "should return an error when given a wrong start_date format", %{conn: conn} do
       conn =
         post(conn, Routes.csv_report_path(conn, :create, "DailyRegistrationsByPartner"), %{
           start_date: "foo"
@@ -118,7 +118,7 @@ defmodule FacilitaPayExerciseWeb.CsvReportControllerTest do
       asserts_invalid_date_format(conn)
     end
 
-    test "sould return an error when given a wrong end_date format", %{conn: conn} do
+    test "should return an error when given a wrong end_date format", %{conn: conn} do
       conn =
         post(conn, Routes.csv_report_path(conn, :create, "DailyRegistrationsByPartner"), %{
           end_date: "foo"
@@ -129,7 +129,7 @@ defmodule FacilitaPayExerciseWeb.CsvReportControllerTest do
   end
 
   describe "POST /csv_report/foo" do
-    test "sould return not found when given a wrong report_name is given", %{conn: conn} do
+    test "should return not found when given a wrong report_name is given", %{conn: conn} do
       conn =
         post(conn, Routes.csv_report_path(conn, :create, "foo"), %{
           end_date: "foo"
