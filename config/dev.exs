@@ -5,7 +5,7 @@ config :facilita_pay_exercise, FacilitaPayExercise.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "facilita_pay_exercise_dev",
+  database: "facilitapay_exercise_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
